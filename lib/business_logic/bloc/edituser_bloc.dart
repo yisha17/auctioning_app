@@ -37,3 +37,20 @@ class EdituserBloc extends Bloc<EdituserEvent, EdituserState> {
         yield GetFailureState(e.toString());
       }
     }
+    // else if (event is CheckEditEvent){
+      
+    //   var data = sharedPreferences?.get("idUser");
+    //   if(data != null){
+    //     yield LoggedInState();
+    //   }else{
+    //     yield LoggedOutState();
+    //   }
+    // }
+    // else if(event is LogOutEvent){
+    //   sharedPreferences = await SharedPreferences.getInstance();
+    //   await sharedPreferences?.clear();
+    //   yield LoggedOutState();
+    // }
+    
+  }
+}
