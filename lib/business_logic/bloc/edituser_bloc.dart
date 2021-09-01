@@ -1,18 +1,7 @@
 import 'dart:async';
 
+import 'package:auction_real/data/dataproviders/UserdataProvider.dart';
+import 'package:auction_real/data/models/models.dart';
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
-
-part 'edituser_event.dart';
-part 'edituser_state.dart';
-
-class EdituserBloc extends Bloc<EdituserEvent, EdituserState> {
-  EdituserBloc() : super(EdituserInitial());
-
-  @override
-  Stream<EdituserState> mapEventToState(
-    EdituserEvent event,
-  ) async* {
-    // TODO: implement mapEventToState
-  }
-}
+import 'package:equatable/equatable.dart';
+import 'package:shared_preferences/shared_preferences.dart';
