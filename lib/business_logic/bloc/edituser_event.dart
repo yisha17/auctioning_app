@@ -6,6 +6,8 @@ abstract class EdituserEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+
 class EditEvent extends EdituserEvent{
   final String ?name;
   final String ?email;
