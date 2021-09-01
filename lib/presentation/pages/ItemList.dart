@@ -1,3 +1,4 @@
+
 import 'dart:io';
 
 import 'package:auction_real/business_logic/bloc/listitem_bloc.dart';
@@ -155,7 +156,7 @@ class ItemList extends StatelessWidget {
                   ),
                 );
               }
-               return Center(child: CircularProgressIndicator());
+              return Center(child: CircularProgressIndicator());
             },
           ),
         ),
