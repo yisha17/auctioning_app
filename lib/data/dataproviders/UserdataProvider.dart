@@ -26,3 +26,15 @@ class UserDataProvider {
       throw Exception("can not login");
     }
   }
+  Future<UserModel> login(UserModel user) async {
+    final http.Response response =
+        await http.post(Uri.http(base_url, '/auction/auth/user/login'),
+            headers: <String, String>{
+              "Content-Type": "application/json;charset=UTF-8",
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Methods":
+                  "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+              "Access-Control-Allow-Headers":
+                  "Origin, Content-Type, X-Auth-Token"
+            },
+            body: jsonEncode({"email": user.email, "password": user.password}));
