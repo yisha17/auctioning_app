@@ -6,6 +6,7 @@ class EdituserState  {
   factory EdituserState.initial() => EdituserState();
 
 }
+
 class GetFailureState extends EdituserState{
   final String error;
 
