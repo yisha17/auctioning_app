@@ -1,4 +1,8 @@
 part of 'edituser_bloc.dart';
 
-@immutable
-abstract class EdituserEvent {}
+abstract class EdituserEvent extends Equatable {
+  const EdituserEvent();
+
+  @override
+  List<Object> get props => [];
+}
