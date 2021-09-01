@@ -26,6 +26,7 @@ class UserDataProvider {
       throw Exception("can not login");
     }
   }
+
   Future<UserModel> login(UserModel user) async {
     final http.Response response =
         await http.post(Uri.http(base_url, '/auction/auth/user/login'),
@@ -38,7 +39,8 @@ class UserDataProvider {
                   "Origin, Content-Type, X-Auth-Token"
             },
             body: jsonEncode({"email": user.email, "password": user.password}));
-if (response.statusCode == 200) {
+
+    if (response.statusCode == 200) {
       print(response.body);
       return UserModel.fromJSON(jsonDecode(response.body));
     } else {
