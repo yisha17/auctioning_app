@@ -1,6 +1,16 @@
 part of 'edituser_bloc.dart';
 
-@immutable
-abstract class EdituserState {}
+class EdituserState  {
+  final UserModel ?user;
+  const EdituserState({this.user});
+  factory EdituserState.initial() => EdituserState();
 
-class EdituserInitial extends EdituserState {}
+}
+class GetFailureState extends EdituserState{
+  final String error;
+
+  GetFailureState(this.error);
+}
+
+class LoggedInState extends EdituserState{}
+class LoadingState extends EdituserState{}
