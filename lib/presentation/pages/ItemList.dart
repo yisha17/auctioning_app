@@ -155,3 +155,11 @@ class ItemList extends StatelessWidget {
                   ),
                 );
               }
+               return Center(child: CircularProgressIndicator());
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
