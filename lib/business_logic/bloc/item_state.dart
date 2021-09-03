@@ -1,6 +1,16 @@
 part of 'item_bloc.dart';
 
-@immutable
-abstract class ItemState {}
+class ItemCreateState {
+  final ItemModel? item;
 
-class ItemInitial extends ItemState {}
+  ItemCreateState({this.item});
+  factory ItemCreateState.initial() => ItemCreateState();
+}
+
+class GetFailureState extends ItemCreateState {
+  final String error;
+
+  GetFailureState(this.error);
+}
+
+class LoadingState extends ItemCreateState {}
