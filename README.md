@@ -2,15 +2,12 @@
 
 A new Flutter project.
 
-## Getting Started
+## Group members
 
-This project is a starting point for a Flutter application.
+# Khansa Tahir ATR/3185/11
+# Misganaw Meseret ETR/2071/11
+# Nathan Demissie ATR/2724/11
+# Saron Solomon ATR/9421/11
+# Yishak Wondim ATR/7567/11
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
