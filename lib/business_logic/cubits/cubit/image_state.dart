@@ -1,6 +1,9 @@
 part of 'image_cubit.dart';
 
-@immutable
-abstract class ImageState {}
+class ImageState extends Equatable {
+  File? image = File('C:/Users/user/Pictures/dfg.PNG');
+  ImageState(this.image);
 
-class ImageInitial extends ImageState {}
+  @override
+  List<Object> get props => [];
+}
