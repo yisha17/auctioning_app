@@ -18,11 +18,11 @@ The customer can create an item. the customer should assign an image from galler
 
 The customer can bid for item. and he/she can update or delete the bid before the auction is closed.
 
-Group Members                                 ID
-1.Yisak Wondim                               ATR/7567/11  
-2.Misganaw Meseret                           ETR/2071/11
-3.Nathan Demissie                            ATR/2724/11
-4.Saron Solomon                              ATR/9421/11
+Group Members                                 ID<br />
+1.Yisak Wondim                               ATR/7567/11 <br />   
+2.Misganaw Meseret                           ETR/2071/11 <br /> 
+3.Nathan Demissie                            ATR/2724/11 <br /> 
+4.Saron Solomon                              ATR/9421/11<br />
 5.Toti Derara                                ATE/5298/09
 
 
