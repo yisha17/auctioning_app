@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-
+import 'package:auction_real/data/models/item_model.dart';
+import 'package:auction_real/data/repositories/itemRepository.dart';
 part 'allitem_event.dart';
 part 'allitem_state.dart';
 
