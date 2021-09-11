@@ -1,6 +1,21 @@
 part of 'sign_up_bloc.dart';
 
-@immutable
-abstract class SignUpState {}
+class SignupState {
+  final UserModel? user;
 
-class SignUpInitial extends SignUpState {}
+  const SignupState({this.user});
+
+  factory SignupState.initial() => SignupState();
+}
+
+class GetFailureState extends SignupState {
+  final String error;
+
+  GetFailureState(this.error);
+}
+
+class LoggedInState extends SignupState {}
+
+class LoggedOutState extends SignupState {}
+
+class LoadingState extends SignupState {}
