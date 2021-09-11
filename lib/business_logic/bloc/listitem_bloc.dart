@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-part 'itemlist_event.dart';
-part 'itemlist_state.dart';
+part 'listitem_event.dart';
+part 'listitem_state.dart';
 
 class ItemlistBloc extends Bloc<ItemlistEvent, ItemlistState> {
   ItemlistBloc() : super(ItemlistInitial());
