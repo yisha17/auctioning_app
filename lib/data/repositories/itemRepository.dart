@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:auction_real/data/dataproviders/itemDataProvider.dart';
-import 'package:auction_real/data/models/item_model.dart';
+
+import 'package:bidding_app/data/dataproviders/itemDataProvider.dart';
+import 'package:bidding_app/data/models/item_model.dart';
 
 
 

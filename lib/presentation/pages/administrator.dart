@@ -1,10 +1,11 @@
 
-import 'package:auction_real/presentation/pages/allItems.dart';
-import 'package:auction_real/presentation/pages/allUsers.dart';
+
+import 'package:bidding_app/presentation/pages/allItems.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'LoginPage.dart';
+import 'allUsers.dart';
 
 class Administrator extends StatefulWidget{
   @override

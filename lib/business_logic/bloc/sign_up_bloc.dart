@@ -1,11 +1,12 @@
-import 'package:auction_real/data/dataproviders/UserdataProvider.dart';
+
+import 'package:bidding_app/data/dataproviders/UserdataProvider.dart';
 import 'package:bidding_app/data/models/models.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:auction_real/data/models/models.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
-part 'signup_event.dart';
-part 'signup_state.dart';
+part 'sign_up_event.dart';
+part 'sign_up_state.dart';
 
 class SignupBloc extends Bloc<SignupEvent, SignupState> {
   SignupBloc() : super(SignupState());

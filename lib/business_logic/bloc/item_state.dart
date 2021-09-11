@@ -12,5 +12,5 @@ class GetFailureState extends ItemCreateState {
 
   GetFailureState(this.error);
 }
-
+class SuccessSaveItem extends ItemCreateState {}
 class LoadingState extends ItemCreateState {}

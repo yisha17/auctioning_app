@@ -1,15 +1,16 @@
-
 import 'dart:io';
 
-import 'package:auction_real/business_logic/bloc/listitem_bloc.dart';
-import 'package:auction_real/data/dataproviders/itemDataProvider.dart';
-import 'package:auction_real/data/repositories/itemRepository.dart';
-import 'package:auction_real/presentation/pages/BiddingPage.dart';
+
+import 'package:bidding_app/business_logic/bloc/itemlist_bloc.dart';
+import 'package:bidding_app/data/dataproviders/itemDataProvider.dart';
+import 'package:bidding_app/data/repositories/itemRepository.dart';
 
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'BiddingPage.dart';
 
 class ItemList extends StatelessWidget {
   final String category;
@@ -145,8 +146,16 @@ class ItemList extends StatelessWidget {
                                   '${items.elementAt(index).minPrice} Birr'),
                               onTap: () {
                                 print('${items.elementAt(index).id}');
-                                 Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => BiddingPage(id:'${items.elementAt(index).id}',)));
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => BiddingPage(
+                                          id: '${items.elementAt(index).id}',
+                                          itemName:'${items.elementAt(index).itemName}',
+                                          increment:'${items.elementAt(index).increment}',
+                                          minPrice:'${items.elementAt(index).minPrice} Birr',
+                                          closingDate: '${items.elementAt(index).closingDate}',
+                                          closingHour: '${items.elementAt(index).closingTime}',
+                                          image:'${items.elementAt(index).image}' ,
+                                        )));
                               },
                             );
                           },

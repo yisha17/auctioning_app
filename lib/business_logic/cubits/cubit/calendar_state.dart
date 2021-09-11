@@ -1,6 +1,11 @@
 part of 'calendar_cubit.dart';
 
-@immutable
-abstract class CalendarState {}
+class CalendarState extends Equatable {
+  
+  DateTime fromDate = DateTime.now();
+  CalendarState(this.fromDate);
 
-class CalendarInitial extends CalendarState {}
+  @override
+  List<Object> get props => [];
+}
+

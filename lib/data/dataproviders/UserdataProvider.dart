@@ -1,7 +1,8 @@
 import 'dart:convert';
 
+import 'package:bidding_app/data/models/user_model.dart';
 import 'package:http/http.dart' as http;
-import 'package:auction_real/data/models/models.dart';
+
 
 //"" + resource.url
 // class APIWeb{
