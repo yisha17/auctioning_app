@@ -1,5 +1,6 @@
 
 import 'package:bidding_app/presentation/pages/EditUser.dart';
+import 'package:bidding_app/presentation/pages/LoginPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
@@ -51,6 +52,7 @@ class ProfilePage extends StatelessWidget {
                 onPressed: () async {
                   sharedPreferences = await SharedPreferences.getInstance();
                   await sharedPreferences?.clear();
+                  box.erase();
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => LoginPage()));
                 },

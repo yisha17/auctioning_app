@@ -1,6 +1,7 @@
 
 
 import 'package:bidding_app/presentation/pages/allItems.dart';
+import 'package:bidding_app/presentation/pages/profilePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +19,9 @@ class AdministratorState extends State<Administrator>{
 PageController pageController = PageController();
 
 var screen = [
+  AllUser(),
 AllItems(),
-AllUser(),
-LoginPage()
+ProfilePage()
 ];
   void onTapped(int index) {
     setState(() => 

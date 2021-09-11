@@ -18,7 +18,7 @@ class UserModel {
   factory UserModel.fromJSON(Map<String,dynamic> jsonMap){
     final result = UserModel(
       id:jsonMap['id'],
-      name: jsonMap['username'],
+      name: jsonMap['name'],
       email: jsonMap['email'],
       password: jsonMap['password'],
       re_password: jsonMap['re_password'],
