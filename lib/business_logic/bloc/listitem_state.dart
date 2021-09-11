@@ -1,4 +1,4 @@
-part of 'itemlist_bloc.dart';
+part of 'listitem_bloc.dart';
 
 @immutable
 abstract class ItemlistState {}
