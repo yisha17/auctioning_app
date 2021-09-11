@@ -1,8 +1,10 @@
+import 'package:bidding_app/data/repositories/itemRepository.dart';
 import 'package:js/js.dart';
 
-import 'package:auction_real/data/repositories/itemRepository.dart';
-import 'package:auction_real/presentation/pages/ItemList.dart';
+
 import 'package:flutter/material.dart';
+
+import 'ItemList.dart';
 
 class Categories extends StatefulWidget {
   CategoriesState createState() => CategoriesState();
@@ -20,11 +22,11 @@ class CategoriesState extends State<Categories> {
   ];
   final List<String> name = [
     'Apartment',
-    'Television',
+    'Appliance',
     'Clock',
-    'truck',
-    'Clock',
-    'Business'
+    'Truck',
+    'Artifact',
+    'Bags'
   ];
 
   Widget buildGridElement(
@@ -91,6 +93,7 @@ class CategoriesState extends State<Categories> {
             ),
           ),
           Positioned(
+            top: 30,
             right: 0,
             child: IconButton(
               icon: Icon(Icons.logout),
