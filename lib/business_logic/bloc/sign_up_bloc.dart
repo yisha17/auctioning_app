@@ -1,4 +1,5 @@
 import 'package:auction_real/data/dataproviders/UserdataProvider.dart';
+import 'package:bidding_app/data/models/models.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:auction_real/data/models/models.dart';
