@@ -1,18 +1,42 @@
 import 'dart:async';
 
+import 'package:auction_real/data/dataproviders/UserdataProvider.dart';
+import 'package:auction_real/data/models/models.dart';
+import 'package:auction_real/data/repositories/userRepository.dart';
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:equatable/equatable.dart';
 
 part 'alluser_event.dart';
 part 'alluser_state.dart';
 
 class AlluserBloc extends Bloc<AlluserEvent, AlluserState> {
-  AlluserBloc() : super(AlluserInitial());
+  final UserRepository user;
+  AlluserBloc({required this.user}) : super(LoadingState());
 
   @override
   Stream<AlluserState> mapEventToState(
     AlluserEvent event,
   ) async* {
-    // TODO: implement mapEventToState
+    if (event is UserLoad) {
+      yield LoadingState();
+      try {
+        final users = await UserDataProvider().fetchAllUsers();
+
+        yield UserSuccess(users);
+      } catch (_) {
+        yield UserFailure();
+      }
+    }
+
+    if (event is DeleteEvent) {
+      yield LoadingState();
+      try {
+        final delete_user = await user.delete(event.id);
+        final it = await user.fetchAllUsers();
+        yield UserSuccess(it);
+      } catch (_) {
+        yield UserFailure();
+      }
+    }
   }
 }
