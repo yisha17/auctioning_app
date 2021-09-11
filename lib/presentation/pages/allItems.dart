@@ -1,6 +1,7 @@
-import 'package:auction_real/business_logic/bloc/allitem_bloc.dart';
-import 'package:auction_real/data/dataproviders/itemDataProvider.dart';
-import 'package:auction_real/data/repositories/itemRepository.dart';
+
+import 'package:bidding_app/business_logic/bloc/allitem_bloc.dart';
+import 'package:bidding_app/data/dataproviders/itemDataProvider.dart';
+import 'package:bidding_app/data/repositories/itemRepository.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

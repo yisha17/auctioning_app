@@ -1,7 +1,8 @@
 import 'dart:async';
 
-import 'package:auction_real/data/models/item_model.dart';
-import 'package:auction_real/data/repositories/itemRepository.dart';
+
+import 'package:bidding_app/data/models/item_model.dart';
+import 'package:bidding_app/data/repositories/itemRepository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 

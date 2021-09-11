@@ -1,4 +1,4 @@
-part of 'signup_bloc.dart';
+part of 'sign_up_bloc.dart';
 
 class SignupState {
   final UserModel? user;
