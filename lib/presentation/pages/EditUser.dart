@@ -189,6 +189,9 @@ class EditUserState extends State<EditUserPage>{
         onPressed: () {
           editBloc.onEdit(textControllerName.text, textControllerEmail.text,
               textControllerPassword.text, textControllerRepassword.text);
+              box.write('name', textControllerName.text);
+              box.write('email', textControllerEmail.text);
+              box.write('password', textControllerPassword.text);
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Color(0xfff06292)),

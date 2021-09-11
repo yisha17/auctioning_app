@@ -4,17 +4,7 @@ import 'package:bidding_app/data/models/user_model.dart';
 import 'package:http/http.dart' as http;
 
 
-//"" + resource.url
-// class APIWeb{
-//   Future<Response> load(APIService<http.Response> resource) async {
-//     final response = await http.get(Uri.http('127.0.0.1:5000', '/auction/auth/user/login'));
-//     if (response.statusCode == 200){
-//       return resource.parse(response);
-//     }else{
-//       throw Exception(response.statusCode);
-//     }
-//   }
-// }
+
 class UserDataProvider {
   static final String base_url = '127.0.0.1:5000';
     final String path = '/auction/auth/user';
@@ -104,7 +94,6 @@ class UserDataProvider {
           "email": user.email,
           "password": user.password,
           "re_password": user.re_password,
-          "administrator": user.administrator
         }));
 
         if (response.statusCode == 200) {

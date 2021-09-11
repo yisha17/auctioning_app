@@ -43,13 +43,8 @@ class AllItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop();
-          },
-        ),
-        title: Text('All Items'),
+        
+        title: Text('Your Items'),
       ),
       body: RepositoryProvider.value(
         value: this.itemRepository,

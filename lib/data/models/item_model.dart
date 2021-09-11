@@ -10,6 +10,7 @@ class ItemModel {
   final String? closingTime;
   final String? category;
   final String? image;
+  final bool? closed;
 
   ItemModel({
     this.id,
@@ -21,6 +22,7 @@ class ItemModel {
     this.closingTime,
     this.category,
     this.image,
+    this.closed
   });
 
   factory ItemModel.fromJSON(Map<String, dynamic> jsonMap) {
@@ -33,7 +35,8 @@ class ItemModel {
         category: jsonMap['category'],
         closingDate: jsonMap['closing_date'],
         closingTime: jsonMap['closing_hour'],
-        image: jsonMap['image']);
+        image: jsonMap['image'],
+        closed: jsonMap['closed']);
 
     return result;
   }

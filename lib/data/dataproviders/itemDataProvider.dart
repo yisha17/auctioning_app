@@ -80,7 +80,8 @@ class ItemDataProvider {
           "category": item.category,
           "minimum_price": item.minPrice,
           "increment": item.increment,
-          "image": item.image
+          "image": item.image,
+          "closed":false
         }));
 
     if (response.statusCode == 200) {
@@ -105,6 +106,31 @@ class ItemDataProvider {
       print("deleted");
     } else {
       throw Exception("Field to delete the course");
+    }
+  }
+
+  Future<ItemModel> updateItem(String id,ItemModel item) async {
+    final response = await http.put(Uri.http(base_url, '/auction/v1/seller/$id'),
+        headers: <String, String>{
+          "Content-Type": "application/json;charset=UTF-8",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: jsonEncode({
+          "item_name": item.itemName,
+          "user": item.user,
+          "closing_date": item.closingDate.toString(),
+          "closing_hour": item.closingTime.toString(),
+          "category": item.category,
+          "minimum_price": item.minPrice,
+          "increment": item.increment,
+          "image": item.image,
+          "closed":false
+        }));
+
+    if (response.statusCode == 200) {
+      return ItemModel.fromJSON(jsonDecode(response.body));
+    } else {
+      throw Exception("can not update an item");
     }
   }
 }

@@ -151,7 +151,7 @@ class ItemList extends StatelessWidget {
                                           id: '${items.elementAt(index).id}',
                                           itemName:'${items.elementAt(index).itemName}',
                                           increment:'${items.elementAt(index).increment}',
-                                          minPrice:'${items.elementAt(index).minPrice} Birr',
+                                          minPrice:'${items.elementAt(index).minPrice}',
                                           closingDate: '${items.elementAt(index).closingDate}',
                                           closingHour: '${items.elementAt(index).closingTime}',
                                           image:'${items.elementAt(index).image}' ,

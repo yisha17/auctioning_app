@@ -20,7 +20,8 @@ def single_item(id):
         'closing_date':get_user['closing_date'],
         'closing_hour':get_user['closing_hour'],
         'minimum_price':get_user['minimum_price'],
-        'image':get_user['image'] 
+        'image':get_user['image'],
+        'closed':get_user['closed'], 
     }
     
 
@@ -38,6 +39,7 @@ def post_item():
     category = request.json['category']
     minimumPrice = request.json['minimum_price']
     image = request.json['image']
+    closed = request.json['closed']
     
 
    
@@ -50,6 +52,7 @@ def post_item():
     'category':category,
     'minimum_price':minimumPrice,
     'image':image,
+    'closed':closed,
     })
     
     
@@ -182,7 +185,7 @@ def update_item(id):
         'image':updated_item['image']
 
     }
-    return output
+    return jsonify(output)
 
 
 
