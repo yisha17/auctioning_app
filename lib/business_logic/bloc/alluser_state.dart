@@ -1,6 +1,21 @@
 part of 'alluser_bloc.dart';
 
-@immutable
-abstract class AlluserState {}
+abstract class AlluserState extends Equatable {
+  const AlluserState();
 
-class AlluserInitial extends AlluserState {}
+  @override
+  List<Object> get props => [];
+}
+
+class UserSuccess extends AlluserState {
+  final Iterable<UserModel> users;
+
+  UserSuccess([this.users = const []]);
+
+  @override
+  List<Object> get props => [users];
+}
+
+class LoadingState extends AlluserState {}
+
+class UserFailure extends AlluserState {}
