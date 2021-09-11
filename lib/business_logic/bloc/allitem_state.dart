@@ -1,6 +1,21 @@
 part of 'allitem_bloc.dart';
 
-@immutable
-abstract class AllitemState {}
+abstract class AllitemState extends Equatable {
+  const AllitemState();
 
-class AllitemInitial extends AllitemState {}
+  @override
+  List<Object> get props => [];
+}
+
+class ItemSuccess extends AllitemState {
+  final List<ItemModel> items;
+
+  ItemSuccess([this.items = const []]);
+
+  @override
+  List<Object> get props => [items];
+}
+
+class LoadingState extends AllitemState {}
+
+class UserFailure extends AllitemState {}
