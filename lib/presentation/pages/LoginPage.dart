@@ -1,6 +1,7 @@
 import 'package:auction_real/business_logic/bloc/authentication_bloc.dart';
 import 'package:auction_real/presentation/pages/administrator.dart';
 import 'package:auction_real/presentation/pages/bottomNavigationBar.dart';
+import 'package:bidding_app/business_logic/bloc/authentication_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_storage/get_storage.dart';
